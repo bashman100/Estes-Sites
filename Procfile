@@ -1,1 +1,1 @@
-web: gunicorn eventio.wsgi --log-file -
+web: gunicorn Tech_Sites.wsgi --log-file -
