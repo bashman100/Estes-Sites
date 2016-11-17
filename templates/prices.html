@@ -1,0 +1,17 @@
+{% extends '_partials/main.html' %}
+
+{% block content %}
+{% for price in prices %}
+<div>
+  <h3>{{ price.name }}</h3>
+  {% if price.is_dynamic %}
+  <p>Dynamic page</p>
+  {% else %}
+  <p>Static page</p>
+  {% endif %}
+  <p><em>${{ price.price_base }} {% if price.price_page %} plus ${{ price.price_page }} per page {% endif %}</em></p>
+  <p>{{ price.description }}</p>
+  <p>Up to {{ price.num_page_max }} pages starts with {{ price.num_page_base }}</p>
+</div>
+{% endfor %}
+{% endblock content %}

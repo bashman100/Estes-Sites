@@ -1,0 +1,12 @@
+{% extends '_partials/main.html' %}
+
+{% block content %}
+{% for site in sites %}
+<div>
+  <h3>{{ site.name }}</h3>
+  <h4>{{ site.url }}</h4>
+  <p>The site cost them {{ site.cost }} to make and was published {{ site.date_made }}</p>
+  <p>They used {{ site.price_teir }}</p>
+</div>
+{% endfor %}
+{% endblock content %}
