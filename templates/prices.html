@@ -13,5 +13,10 @@
   <p>{{ price.description }}</p>
   <p>Up to {{ price.num_page_max }} pages starts with {{ price.num_page_base }}</p>
 </div>
+{% if price.css %}
+  {% block css %}
+    {{ price.css }}
+  {% endblock css %}
+{% endif %}
 {% endfor %}
 {% endblock content %}
